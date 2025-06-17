@@ -1,0 +1,139 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #232526 0%, #1e1e1e 100%);
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: rgba(30, 30, 30, 0.98);
+  padding: 28px 24px 24px 24px;
+  border-radius: 20px;
+  width: 340px;
+  box-shadow: 0 8px 40px 0 rgba(40, 40, 60, 0.5), 0 1.5px 3px rgba(98,0,234, 0.05);
+  backdrop-filter: blur(2px);
+  border: 1.5px solid rgba(98,0,234,0.08);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 2px 16px #3700b366;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 12px 14px;
+  background: linear-gradient(90deg, #292929 60%, #333357 100%);
+  border: 1.5px solid #292929;
+  border-radius: 8px;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 5px #00000022;
+}
+input[type="text"]:focus {
+  border: 1.5px solid #6200ea;
+  box-shadow: 0 0 8px #6200ea88, 0 1px 5px #00000022;
+  background: linear-gradient(90deg, #232526 70%, #292959 100%);
+}
+
+button {
+  width: 25%;
+  padding: 12px 0;
+  background: linear-gradient(90deg, #6200ea 40%, #3700b3 100%);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #6200ea33;
+  transition: background 0.3s, transform 0.15s, box-shadow 0.3s;
+  outline: none;
+}
+button:hover, button:focus {
+  background: linear-gradient(90deg, #a066fa 40%, #3700b3 100%);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 20px #6200ea66;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 260px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #6200ea #222;
+}
+ul::-webkit-scrollbar {
+  width: 7px;
+  background: #232326;
+}
+ul::-webkit-scrollbar-thumb {
+  background: #6200ea;
+  border-radius: 5px;
+}
+
+li {
+  background: linear-gradient(90deg, #222222 80%, #333357 100%);
+  padding: 12px 13px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 6px #0000001c;
+  transition: background 0.2s, box-shadow 0.2s;
+  font-size: 16px;
+  position: relative;
+}
+
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.55;
+  filter: blur(0.3px);
+  background: linear-gradient(90deg, #24243e 80%, #0f2027 100%);
+  box-shadow: none;
+}
+
+li button {
+  background: linear-gradient(90deg, #d32f2f 50%, #b71c1c 100%);
+  border: none;
+  padding: 7px 11px;
+  color: white;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #d32f2f22;
+  transition: background 0.22s, transform 0.18s, box-shadow 0.22s;
+  margin-left: 8px;
+  outline: none;
+}
+li button:hover, li button:focus {
+  background: linear-gradient(90deg, #ff1744 50%, #c62828 100%);
+  transform: scale(1.08) rotate(-3deg);
+  box-shadow: 0 4px 16px #ff174433;
+}
